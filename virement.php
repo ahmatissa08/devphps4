@@ -12,11 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $compte_destinataire = $_POST['compte_destinataire'];
     $montant = floatval($_POST['montant']);
 
-    $sql_debit = "UPDATE ComptesBancaires SET solde = solde - ? WHERE numero_compte = ?";
+    $sql_debit = "UPDATE comptesbancaires SET solde = solde - ? WHERE numero_compte = ?";
     $stmt_debit = $conn->prepare($sql_debit);
     $stmt_debit->bind_param("ds", $montant, $compte_origine);
 
-    $sql_credit = "UPDATE ComptesBancaires SET solde = solde + ? WHERE numero_compte = ?";
+    $sql_credit = "UPDATE comptesbancaires SET solde = solde + ? WHERE numero_compte = ?";
     $stmt_credit = $conn->prepare($sql_credit);
     $stmt_credit->bind_param("ds", $montant, $compte_destinataire);
 

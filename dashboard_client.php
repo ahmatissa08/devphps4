@@ -10,11 +10,11 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'client') {
 
 $client_id = $_SESSION['user_id'];
 
-$sql_client = "SELECT * FROM Clients WHERE id = $client_id";
+$sql_client = "SELECT * FROM clients WHERE id = $client_id";
 $result_client = $conn->query($sql_client);
 $client_data = $result_client->fetch_assoc();
 
-$sql_accounts = "SELECT * FROM ComptesBancaires WHERE client_id = $client_id";
+$sql_accounts = "SELECT * FROM comptesbancaires WHERE client_id = $client_id";
 $result_accounts = $conn->query($sql_accounts);
 
 ?>
@@ -37,7 +37,7 @@ $result_accounts = $conn->query($sql_accounts);
             echo "<h4>Compte : " . $account['numero_compte'] . "</h4>";
 
             $account_id = $account['id'];
-            $sql_operations = "SELECT * FROM OperationsBancaires WHERE compte_id = $account_id ORDER BY date_operation DESC";
+            $sql_operations = "SELECT * FROM operationsbancaires WHERE compte_id = $account_id ORDER BY date_operation DESC";
             $result_operations = $conn->query($sql_operations);
 
             if ($result_operations->num_rows > 0) {
@@ -53,7 +53,7 @@ $result_accounts = $conn->query($sql_accounts);
                 echo "</table>";
 
                 // Calculer le solde actuel du compte
-                $sql_balance = "SELECT SUM(montant) AS total FROM OperationsBancaires WHERE compte_id = $account_id";
+                $sql_balance = "SELECT SUM(montant) AS total FROM operationsbancaires WHERE compte_id = $account_id";
                 $result_balance = $conn->query($sql_balance);
                 $balance = $result_balance->fetch_assoc()['total'];
                 echo "<p>Solde actuel : " . number_format($balance, 2) . " EUR</p>";

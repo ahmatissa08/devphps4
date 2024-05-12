@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'gestionnaire') {
 }
 include 'db.php';
 
-$sql = "SELECT * FROM ComptesBancaires";
+$sql = "SELECT * FROM comptesbancaires";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

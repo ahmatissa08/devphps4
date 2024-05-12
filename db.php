@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost"; 
-$username = "root"; 
-$password = "123456"; 
-$dbname = "banque"; 
+$servername = "mysql-souguibg.alwaysdata.net"; 
+$username = "souguibg"; 
+$password = "WCJ.nJw4sEBiFzV"; 
+$dbname = "souguibg_bd"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

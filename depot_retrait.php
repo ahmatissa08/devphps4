@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifier le type d'opération
     if ($type_operation === 'depot') {
         // Opération de dépôt
-        $sql = "UPDATE ComptesBancaires SET solde = solde + ? WHERE numero_compte = ?";
+        $sql = "UPDATE comptesbancaires SET solde = solde + ? WHERE numero_compte = ?";
     } elseif ($type_operation === 'retrait') {
         // Opération de retrait
-        $sql = "UPDATE ComptesBancaires SET solde = solde - ? WHERE numero_compte = ?";
+        $sql = "UPDATE comptesbancaires SET solde = solde - ? WHERE numero_compte = ?";
     }
 
     $stmt = $conn->prepare($sql);

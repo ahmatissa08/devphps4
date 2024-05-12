@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username']; 
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO Gestionnaires (prenom, nom, adresse, telephone, username, password) 
+    $sql = "INSERT INTO gestionnaires (prenom, nom, adresse, telephone, username, password) 
             VALUES ('$prenom', '$nom', '$adresse', '$telephone', '$username', '$password')";
 
     if ($conn->query($sql) === TRUE) {

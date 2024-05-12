@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     
-    $sql_client = "INSERT INTO Clients (prenom, nom, adresse, telephone, username, password) 
+    $sql_client = "INSERT INTO clients (prenom, nom, adresse, telephone, username, password) 
                    VALUES ('$prenom', '$nom', '$adresse', '$telephone', '$username', '$password')";
 
     if ($conn->query($sql_client) === TRUE) {
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $numero_compte = generateAccountNumber(); 
         $initial_solde = 0.00;
 
-        $sql_account = "INSERT INTO ComptesBancaires (numero_compte, solde, client_id) 
+        $sql_account = "INSERT INTO comptesbancaires (numero_compte, solde, client_id) 
                         VALUES ('$numero_compte', $initial_solde, $client_id)";
 
         if ($conn->query($sql_account) === TRUE) {

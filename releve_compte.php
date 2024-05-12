@@ -14,7 +14,7 @@
 
             $account_id = $_GET['account_id'];
 
-            $sql = "SELECT * FROM ComptesBancaires WHERE id = $account_id";
+            $sql = "SELECT * FROM comptesbancaires WHERE id = $account_id";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -22,7 +22,7 @@
                 echo "<h3>Numéro de Compte: " . $row['numeroCompte'] . "</h3>";
                 echo "<h4>Solde Actuel: $" . $row['solde'] . "</h4>";
 
-                $transactions_sql = "SELECT * FROM Transactions WHERE compte_id = $account_id";
+                $transactions_sql = "SELECT * FROM transactions WHERE compte_id = $account_id";
                 $transactions_result = $conn->query($transactions_sql);
 
                 if ($transactions_result->num_rows > 0) {

@@ -1,5 +1,3 @@
-// traitement_operations.php
-
 <?php
 
 require_once 'connexion.php';

@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $conn->close();
 } else {
-    header("Location: connexion_client.php");
+    header("Location: inde.html");
     exit();
 }
 ?>

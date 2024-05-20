@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Création de compte client - Banque</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <div class="create-account-container">
+<div class="container">
+<div class="login-section">
+<div class="login-box">
         <h2>Création de compte client</h2>
         <form action="process_creation_compte_client.php" method="post">
-            <label for="prenom">Prénom:</label>
-            <input type="text" id="prenom" name="prenom" required>
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
-            <label for="adresse">Adresse:</label>
-            <input type="text" id="adresse" name="adresse" required>
-            <label for="telephone">Téléphone:</label>
-            <input type="text" id="telephone" name="telephone" required>
-            <label for="username">Nom d'utilisateur:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Créer le compte client</button>
+        <div class="input-box">
+              <input type="prenom" required />
+              <label>Prenom</label>
+            </div>
+        <div class="input-box">
+              <input type="nom" required />
+              <label>Nom</label>
+            </div>
+            <div class="input-box">
+              <input type="adresse" required />
+              <label>Adresse</label>
+            </div>
+            <div class="input-box">
+              <input type="telephone" required />
+              <label>Telephone</label>
+            </div>
+            <div class="input-box">
+              <input type="username" required />
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <input type="password" required />
+              <label>Password</label>
+            </div>
+            <button type="submit" class="btn">Créer le Compte</button>
+        </div>
         </form>
+    </div>
+    </div>
     </div>
 </body>
 </html>

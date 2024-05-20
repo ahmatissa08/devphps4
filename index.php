@@ -6,13 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="welcome-container">
+    <section>
+<div class="welcome-container">
         <h2>Bienvenue sur notre service bancaire</h2>
-        <p>Choisissez votre type de connexion :</p>
-        <ul>
-            <li><a href="connexion_gestionnaire.php">Continuer en tant que gestionnaire</a></li>
-            <li><a href="connexion_client.php">Continuer en tant que client</a></li>
-        </ul>
+        <h4>Choisissez votre type de connexion :</h4>
+        <br>
+     <ul>
+        <li>
+            <a href="connexion_client.php">
+               <button class="BTN1">
+                   Continuer en tant que Client
+               </button>
+            </li>
+            <br>
+     <li>
+        </a>
+            <a href="connexion_gestionnaire.php">
+                <button class="BTN2">
+                     Continuer en tant que gestionnaire
+                </button>
+            </a>
+     </li>
+</ul>
     </div>
+    </section>
 </body>
 </html>

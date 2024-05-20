@@ -6,16 +6,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Connexion Gestionnaire</h2>
-        <form action="process_login_gestionnaire.php" method="post">
-            <label for="username">Nom d'utilisateur:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Se connecter</button>
-        </form>
-        <p>Pas encore de compte gestionnaire ? <a href="creation_compte_gestionnaire.php">Créer un compte</a></p>
-    </div>
+<div class="container">
+      <div class="login-section">
+        <div class="login-box">
+          <h2>Login</h2>
+          <form action="process_login_gestionnaire.php" method="POST">
+            <div class="input-box">
+              <input type="username" autocomplete="off" name="username" class="input" placeholder="Username">
+            </div>
+            <div class="input-box">
+              <input type="password" autocomplete="off" name="password" class="input" placeholder="Password">
+            </div>
+            <div class="forgot-password">
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="signup-link">
+              <a href="creation_compte_gestionnaire.php">Signup</a>
+            </div>
+          </form>
+        </div>
+        
+      </div>
 </body>
 </html>

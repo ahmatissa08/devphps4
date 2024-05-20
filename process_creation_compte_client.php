@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql_account) === TRUE) {
             echo "Compte client créé avec succès.";
-            header("Location: index.php");
+            header("Location: inde.php");
             exit();
         } else {
             echo "Erreur lors de la création du compte bancaire : " . $conn->error;
